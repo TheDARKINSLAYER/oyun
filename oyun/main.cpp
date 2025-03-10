@@ -765,6 +765,7 @@ int para_kullanimi(){
             }
         }else if(para1 == 0){
             cout << "paranız yeterli değil!" << endl;
+            geri++;
         }
     }
     else if(hamle_sirasi == "player2"){
@@ -807,6 +808,7 @@ int para_kullanimi(){
             }
         }else if(para2 == 0){
             cout << "paranız yeterli değil!" << endl;
+            geri++;
         }
     }
     return geri;
