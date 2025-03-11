@@ -820,8 +820,7 @@ int birim_oyna2(){
     do{
         if(c==2)
             c--;
-        if(yerlestirme == "A1"){
-            cout << "A1 konumuna yerlestirmek istediğiniz birimi seçin(piyade/mekanize piyade/komando/tank/birimler hakkında/geri):";
+            cout << yerlestirme << " konumuna yerlestirmek istediğiniz birimi seçin(piyade/mekanize piyade/komando/tank/birimler hakkında/geri):";
             getline(cin,b);
             if(b == "piyade")
                 birim = b;
@@ -833,236 +832,16 @@ int birim_oyna2(){
                 birim = b;
             else if(b == "birimler hakkında"){
                 birimler_hakkında();
-                r++;
-                break;
+                c++;
             }
             else if (b == "geri"){
                 geri++;
                 break;
-            }
-            else {
+                
+            }else{
                 cout << "yerlestirmek istediğiniz biriminin adını doğru yazınız!" << endl;
                 c++;
             }
-        }
-        else if(yerlestirme == "A2"){
-            cout << "A2 konumuna yerlestirmek istediğiniz birimi seçin(piyade/mekanize piyade/komando/tank/birimler hakkında/geri):";
-            getline(cin,b);
-            if(b == "piyade")
-                birim = b;
-            else if(b == "mekanize piyade")
-                birim = b;
-            else if(b == "komando")
-                birim = b;
-            else if(b == "tank")
-                birim = b;
-            else if(b == "birimler hakkında"){
-                birimler_hakkında();
-                r++;
-                break;
-            }
-            else if (b == "geri"){
-                geri++;
-                break;}
-            else {
-                cout << "yerlestirmek istediğiniz biriminin adını doğru yazınız!" << endl;
-                c++;
-            }
-        }
-        else if(yerlestirme == "A3"){
-            cout << "A3 konumuna yerlestirmek istediğiniz birimi seçin(piyade/mekanize piyade/komando/tank/birimler hakkında/geri):";
-            getline(cin,b);
-            if(b == "piyade")
-                birim = b;
-            else if(b == "mekanize piyade")
-                birim = b;
-            else if(b == "komando")
-                birim = b;
-            else if(b == "tank")
-                birim = b;
-            else if(b == "birimler hakkında"){
-                birimler_hakkında();
-                r++;
-                break;
-            }
-            else if (b == "geri"){
-                geri++;
-                break;}
-            else {
-                cout << "yerlestirmek istediğiniz biriminin adını doğru yazınız!" << endl;
-                c++;
-            }
-        }
-        else if(yerlestirme == "A4"){
-            cout << "A4 konumuna yerlestirmek istediğiniz birimi seçin(piyade/mekanize piyade/komando/tank/birimler hakkında/geri):";
-            getline(cin,b);
-            if(b == "piyade")
-                birim = b;
-            else if(b == "mekanize piyade")
-                birim = b;
-            else if(b == "komando")
-                birim = b;
-            else if(b == "tank")
-                birim = b;
-            else if(b == "birimler hakkında"){
-                birimler_hakkında();
-                r++;
-                break;
-            }
-            else if (b == "geri"){
-                geri++;
-                break;}
-            else {
-                cout << "yerlestirmek istediğiniz biriminin adını doğru yazınız!" << endl;
-                c++;
-            }
-        }
-        else if(yerlestirme == "A5"){
-            cout << "A5 konumuna yerlestirmek istediğiniz birimi seçin(piyade/mekanize piyade/komando/tank/birimler hakkında/geri):";
-            getline(cin,b);
-            if(b == "piyade")
-                birim = b;
-            else if(b == "mekanize piyade")
-                birim = b;
-            else if(b == "komando")
-                birim = b;
-            else if(b == "tank")
-                birim = b;
-            else if(b == "birimler hakkında"){
-                birimler_hakkında();
-                r++;
-                break;
-            }
-            else if (b == "geri"){
-                geri++;
-                break;}
-            else {
-                cout << "yerlestirmek istediğiniz biriminin adını doğru yazınız!" << endl;
-                c++;
-            }
-        }
-        else if(yerlestirme == "B1"){
-            cout << "B1 konumuna yerlestirmek istediğiniz birimi seçin(piyade/mekanize piyade/komando/tank/birimler hakkında/geri):";
-            getline(cin,b);
-            if(b == "piyade")
-                birim = b;
-            else if(b == "mekanize piyade")
-                birim = b;
-            else if(b == "komando")
-                birim = b;
-            else if(b == "tank")
-                birim = b;
-            else if(b == "birimler hakkında"){
-                birimler_hakkında();
-                r++;
-                break;
-            }
-            else if (b == "geri"){
-                geri++;
-                break;
-            }
-            else {
-                cout << "yerlestirmek istediğiniz biriminin adını doğru yazınız!" << endl;
-                c++;
-            }
-        }
-        else if(yerlestirme == "B2"){
-            cout << "B2 konumuna yerlestirmek istediğiniz birimi seçin(piyade/mekanize piyade/komando/tank/birimler hakkında/geri):";
-            getline(cin,b);
-            if(b == "piyade")
-                birim = b;
-            else if(b == "mekanize piyade")
-                birim = b;
-            else if(b == "komando")
-                birim = b;
-            else if(b == "tank")
-                birim = b;
-            else if(b == "birimler hakkında"){
-                birimler_hakkında();
-                r++;
-                break;
-            }
-            else if (b == "geri"){
-                geri++;
-                break;}
-            else {
-                cout << "yerlestirmek istediğiniz biriminin adını doğru yazınız!" << endl;
-                c++;
-            }
-        }
-        else if(yerlestirme == "B3"){
-            cout << "B3 konumuna yerlestirmek istediğiniz birimi seçin(piyade/mekanize piyade/komando/tank/birimler hakkında/geri):";
-            getline(cin,b);
-            if(b == "piyade")
-                birim = b;
-            else if(b == "mekanize piyade")
-                birim = b;
-            else if(b == "komando")
-                birim = b;
-            else if(b == "tank")
-                birim = b;
-            else if(b == "birimler hakkında"){
-                birimler_hakkında();
-                r++;
-                break;
-            }
-            else if (b == "geri"){
-                geri++;
-                break;}
-            else {
-                cout << "yerlestirmek istediğiniz biriminin adını doğru yazınız!" << endl;
-                c++;
-            }
-        }
-        else if(yerlestirme == "B4"){
-            cout << "B4 konumuna yerlestirmek istediğiniz birimi seçin(piyade/mekanize piyade/komando/tank/birimler hakkında/geri):";
-            getline(cin,b);
-            if(b == "piyade")
-                birim = b;
-            else if(b == "mekanize piyade")
-                birim = b;
-            else if(b == "komando")
-                birim = b;
-            else if(b == "tank")
-                birim = b;
-            else if(b == "birimler hakkında"){
-                birimler_hakkında();
-                r++;
-                break;
-            }
-            else if (b == "geri"){
-                geri++;
-                break;}
-            else {
-                cout << "yerlestirmek istediğiniz biriminin adını doğru yazınız!" << endl;
-                c++;
-            }
-        }
-        else if(yerlestirme == "B5"){
-            cout << "B5 konumuna yerlestirmek istediğiniz birimi seçin(piyade/mekanize piyade/komando/tank/birimler hakkında/geri):";
-            getline(cin,b);
-            if(b == "piyade")
-                birim = b;
-            else if(b == "mekanize piyade")
-                birim = b;
-            else if(b == "komando")
-                birim = b;
-            else if(b == "tank")
-                birim = b;
-            else if(b == "birimler hakkında"){
-                birimler_hakkında();
-                r++;
-                break;
-            }
-            else if (b == "geri"){
-                geri++;
-                break;}
-            else {
-                cout << "yerlestirmek istediğiniz biriminin adını doğru yazınız!" << endl;
-                c++;
-            }
-        }
-        
     }while(c==2);
     return geri;
 }
