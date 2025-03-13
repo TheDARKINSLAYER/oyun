@@ -1,4 +1,4 @@
-//2024 yazı kişisel projem
+//2024 yazi kisisel projem
 #include <iostream>
 #include <string>
 using namespace std;
@@ -32,7 +32,7 @@ int tur;
 int saldiri_hakki = 1;
 int r=1;
 
-int cephe[6][2]{};//cephe dizisinin tanımı
+int cephe[6][2]{};//cephe dizisinin tanimi
 
 
 void saldiri_hakki_yenileme();
@@ -56,10 +56,10 @@ int birim_oyna1();
 
 void sistem1(){
     if(hamle_sirasi =="player2")
-        cout << "hamle sırası sizde player2(tur sayacı:" << tur <<")(para:"<< para2 << ")(saldır/birim oyna/pas geç/cephe raporu/oyun hakkında):";
+        cout << "hamle sirasi sizde player2(tur sayaci:" << tur <<")(para:"<< para2 << ")(saldir/birim oyna/pas gec/cephe raporu/oyun hakkinda):";
     
     else if(hamle_sirasi=="player1")
-        cout << "hamle sırası sizde player1(tur sayacı:" << tur <<")(para:"<< para1 << ")(saldır/birim oyna/pas geç/cephe raporu/oyun hakkında):";
+        cout << "hamle sirasi sizde player1(tur sayaci:" << tur <<")(para:"<< para1 << ")(saldir/birim oyna/pas gec/cephe raporu/oyun hakkinda):";
 }
 
 
@@ -95,7 +95,7 @@ int main(){
                                     c--;
                                 sistem1();
                                 getline(cin,hamle);
-                                if(hamle == "saldır"){
+                                if(hamle == "saldir"){
                                     saldir();
                                     if(geri==2)
                                         break;
@@ -119,21 +119,21 @@ int main(){
                                         break;
                                     birim_yerlestirme();
                                 }
-                                else if(hamle == "oyun hakkında")
+                                else if(hamle == "oyun hakkinda")
                                     oyun_hakkinda();
                                 else if(hamle == "cephe raporu")
                                     cephe_raporu();
-                                else if(hamle == "pas geç")
+                                else if(hamle == "pas gec")
                                     continue;
                                 else{
-                                    cout << "lütfen hamlenizi doğru girdiğinizden emin olun." << endl;
+                                    cout << "lutfen hamlenizi dogru girdiginizden emin olun." << endl;
                                     c++;
                                 }
-                            }while(hamle == "saldır");
+                            }while(hamle == "saldir");
                         }while(geri == 2);
                     }while(c == 2);
                 }while(hamle == "birim oyna");
-            }while(hamle == "oyun hakkında");
+            }while(hamle == "oyun hakkinda");
         }while(hamle == "cephe raporu");
         if(cephe[5][1]<1)
             break;
@@ -153,25 +153,25 @@ int main(){
         return 0;
 }
 
-void birimler_hakkında(){
-    cout << "(para bedeli)birimin adı(hasar değeri-can değeri)(özellik)" << endl;
+void birimler_hakkinda(){
+    cout << "(para bedeli)birimin adi(hasar degeri-can degeri)(ozellik)" << endl;
     cout << "(1)piyade (1-1)(yok)" << endl;
     cout << "(2)mekanize piyade(2-2)(yok)" << endl;
     cout << "(3)komando(3-1)(yok)" << endl;
-    cout << "(4)tank(4-3)(DAYANIKLI)" << endl << "DAYANIKLI:tüm hasar kaynaklarından -1 hasar alır." << endl;
+    cout << "(4)tank(4-3)(DAYANIKLI)" << endl << "DAYANIKLI:tum hasar kaynaklarindan -1 hasar alir." << endl;
     
     
 }
 
 void oyun_hakkinda(){
-    cout << "Bu bir sıra tabanlı savaş oyunudur, 2 kişiliktir." << endl;
-    cout << "tur sana geçtiğinde +1 para elde edersin, sadece pas geç komutunu kullanarak turu geçirebilirsiniz ve tur sınırı 30 dur." << endl;
-    cout << "pas geçerek paranızı biriktirebilirsiniz para sınırı 5 tir." <<endl;
-    cout << "birim oyna seçeneğinde biriminizi yerlestirmek istediğiniz bölgeyi ve ardından yerlestirmek istediğiniz birimi seçin, eğer paranız o birimin para bedelini karşılamıyorsa o birimi oynayamazsınız." << endl;
-    birimler_hakkında();
-    cout << "saldır komutu verdiğinizde kendi biriminizi seçin ve vurmak istediğiniz rakip birimi seçebilir ya da direkt olarak düşmanın ana üssüne vurabilirsiniz." << endl;
-    cout << "cephe raporu komutu size savaş haritasını gösterecektir." << endl;
-    cout << "ana üssün canı 0 inen taraf kaybeder, her oyuncu oyuna 15 üs canı ile başlar." << endl;
+    cout << "Bu bir sira tabanli savas oyunudur, 2 kisiliktir." << endl;
+    cout << "tur sana gectiginde +1 para elde edersin, sadece pas gec komutunu kullanarak turu gecirebilirsiniz ve tur siniri 30 dur." << endl;
+    cout << "pas gecerek paranizi biriktirebilirsiniz para siniri 5 tir." <<endl;
+    cout << "birim oyna seceneginde biriminizi yerlestirmek istediginiz bolgeyi ve ardindan yerlestirmek istediginiz birimi secin, eger paraniz o birimin para bedelini karsilamiyorsa o birimi oynayamazsiniz." << endl;
+    birimler_hakkinda();
+    cout << "saldir komutu verdiginizde kendi biriminizi secin ve vurmak istediginiz rakip birimi secebilir ya da direkt olarak dusmanin ana ussune vurabilirsiniz." << endl;
+    cout << "cephe raporu komutu size savas haritasini gosterecektir." << endl;
+    cout << "ana ussun cani 0 inen taraf kaybeder, her oyuncu oyuna 15 us cani ile baslar." << endl;
 }
 
 
@@ -202,7 +202,7 @@ void cephe_raporu(){
             cout << endl << "  " <<cephe[5][0] << "                                                                                                        "<< cephe[5][1] <<"  " << endl;;
         }
         else if(i==1){
-            cout << endl <<"ANA ÜS"<< "                                                                                                    ANA ÜS" << endl;
+            cout << endl <<"ANA uS"<< "                                                                                                    ANA uS" << endl;
         }
         else
             cout << endl << endl;
@@ -234,13 +234,13 @@ void saldiri_hakki_yenileme(){
 
 void sistem4rakipus(){
     if(saldiran/10 == 1)
-        cout << "piyade, rakip üsse 1 hasar verdi." << endl;
+        cout << "piyade, rakip usse 1 hasar verdi." << endl;
     if (saldiran/10 == 2)
-        cout << "mekanize piyade, rakip üsse 2 hasar verdi." << endl;
+        cout << "mekanize piyade, rakip usse 2 hasar verdi." << endl;
     if(saldiran/10 == 3)
-        cout << "komando, rakip üsse 3 hasar verdi." << endl;
+        cout << "komando, rakip usse 3 hasar verdi." << endl;
     if (saldiran/10 == 4)
-        cout << "tank, rakip üsse 4 hasar verdi." << endl;
+        cout << "tank, rakip usse 4 hasar verdi." << endl;
     
 }
 
@@ -356,43 +356,43 @@ void sistem3hasar(){
 void sistem2olum(){
     if(savunan/10==1){
         if(saldiran/10==1)
-            cout << "piyade, piyade tarafından yok edildi." << endl;
+            cout << "piyade, piyade tarafindan yok edildi." << endl;
         else if(saldiran/10==2)
-            cout << "piyade, mekanize piyade tarafından yok edildi. " << endl;
+            cout << "piyade, mekanize piyade tarafindan yok edildi. " << endl;
         else if(saldiran/10==3)
-            cout << "piyade, komando tarafından yok edildi. " << endl;
+            cout << "piyade, komando tarafindan yok edildi. " << endl;
         else if(saldiran/10==4)
-            cout << "piyade, tank tarafından yok edildi. " << endl;
+            cout << "piyade, tank tarafindan yok edildi. " << endl;
     }
     else if(savunan/10==2){
         if(saldiran/10==1)
-            cout << "mekanize piyade, piyade tarafından yok edildi." << endl;
+            cout << "mekanize piyade, piyade tarafindan yok edildi." << endl;
         else if(saldiran/10==2)
-            cout << "mekanize piyade, mekanize piyade tarafından yok edildi. " << endl;
+            cout << "mekanize piyade, mekanize piyade tarafindan yok edildi. " << endl;
         else if(saldiran/10==3)
-            cout << "mekanize piyade, komando tarafından yok edildi. " << endl;
+            cout << "mekanize piyade, komando tarafindan yok edildi. " << endl;
         else if(saldiran/10==4)
-            cout << "mekanize piyade, tank tarafından yok edildi. " << endl;
+            cout << "mekanize piyade, tank tarafindan yok edildi. " << endl;
     }
     else if(savunan/10==3){
         if(saldiran/10==1)
-            cout << "komando, piyade tarafından yok edildi." << endl;
+            cout << "komando, piyade tarafindan yok edildi." << endl;
         else if(saldiran/10==2)
-            cout << "komando, mekanize piyade tarafından yok edildi. " << endl;
+            cout << "komando, mekanize piyade tarafindan yok edildi. " << endl;
         else if(saldiran/10==3)
-            cout << "komando, komando tarafından yok edildi. " << endl;
+            cout << "komando, komando tarafindan yok edildi. " << endl;
         else if(saldiran/10==4)
-            cout << "komando, tank tarafından yok edildi. " << endl;
+            cout << "komando, tank tarafindan yok edildi. " << endl;
     }
     else if(savunan/10==4){
         if(saldiran/10==1)
-            cout << "tank, piyade tarafından yok edildi." << endl;
+            cout << "tank, piyade tarafindan yok edildi." << endl;
         else if(saldiran/10==2)
-            cout << "tank, mekanize piyade tarafından yok edildi. " << endl;
+            cout << "tank, mekanize piyade tarafindan yok edildi. " << endl;
         else if(saldiran/10==3)
-            cout << "tank, komando tarafından yok edildi. " << endl;
+            cout << "tank, komando tarafindan yok edildi. " << endl;
         else if(saldiran/10==4)
-            cout << "tank, tank tarafından yok edildi. " << endl;
+            cout << "tank, tank tarafindan yok edildi. " << endl;
     }
 }
 
@@ -409,7 +409,7 @@ void savas(){
     
     
     if(saldiri_hakki==1){
-        if(secim2 == "rakip üs"){
+        if(secim2 == "rakip us"){
             if(hamle_sirasi == "player1")
                 cephe[5][1] = cephe[5][1] - hasarin(saldiran);
             else
@@ -436,7 +436,7 @@ void savas(){
         }
         
     }else{
-        cout << "bu birim bu tur saldıramaz!" << endl;
+        cout << "bu birim bu tur saldiramaz!" << endl;
         saldiri_hakki++;
         
     }
@@ -450,7 +450,7 @@ void saldir(){
             if(c==2)
                 c--;
             if(hamle_sirasi == "player1"){
-                cout << "bir dost birim seç(A1/A2/A3/A4/A5/geri):";
+                cout << "bir dost birim sec(A1/A2/A3/A4/A5/geri):";
                 getline(cin,secim1);
                 
                 if(secim1== "A1")
@@ -468,16 +468,16 @@ void saldir(){
                     break;
                 }
                 else{
-                    cout << "birimin konumunu doğru belirttiğinizden emin olun!" << endl;
+                    cout << "birimin konumunu dogru belirttiginizden emin olun!" << endl;
                     c++;
                     break;
                 }
                 if(saldiran == 0){
-                    cout << "seçtiğiniz konumda birim bulunmamaktadır!" << endl;
+                    cout << "sectiginiz konumda birim bulunmamaktadir!" << endl;
                     c++;
                     break;
                 }
-                cout << "herhangi bir rakip seç(B1/B2/B3/B4/B5/rakip üs/geri):";
+                cout << "herhangi bir rakip sec(B1/B2/B3/B4/B5/rakip us/geri):";
                 getline(cin,secim2);
 
                 
@@ -506,7 +506,7 @@ void saldir(){
                     savunan1 = 4;
                     savunan2 = 1;
                     }
-                else if(secim2 == "rakip üs"){
+                else if(secim2 == "rakip us"){
                     savunan = cephe[5][1];
                     savunan1 = 5;
                     savunan2 = 1;
@@ -516,18 +516,18 @@ void saldir(){
                     break;
                 }
                 else{
-                    cout << "birimin konumunu doğru belirttiğinizden emin olun!" << endl;
+                    cout << "birimin konumunu dogru belirttiginizden emin olun!" << endl;
                     c++;
                     break;
                 }
                 if(savunan == 0){
-                    cout << "seçtiğiniz konumda birim bulunmamaktadır!" << endl;
+                    cout << "sectiginiz konumda birim bulunmamaktadir!" << endl;
                     c++;
                     break;
                 }
             }
             else if(hamle_sirasi == "player2"){
-                cout << "bir dost birim seç(B1/B2/B3/B4/B5/geri):";
+                cout << "bir dost birim sec(B1/B2/B3/B4/B5/geri):";
                 getline(cin,secim1);
     
                 if(secim1== "B1")
@@ -545,16 +545,16 @@ void saldir(){
                     break;
                 }
                 else{
-                    cout << "birimin konumunu doğru belirttiğinizden emin olun!" << endl;
+                    cout << "birimin konumunu dogru belirttiginizden emin olun!" << endl;
                     c++;
                     break;
                 }
                 if(saldiran == 0){
-                    cout << "seçtiğiniz konumda birim bulunmamaktadır!" << endl;
+                    cout << "sectiginiz konumda birim bulunmamaktadir!" << endl;
                     c++;
                     break;
                 }
-                cout << "herhangi bir rakip seç(A1/A2/A3/A4/A5/rakip üs/geri):";
+                cout << "herhangi bir rakip sec(A1/A2/A3/A4/A5/rakip us/geri):";
                 getline(cin,secim2);
                 
                 
@@ -584,7 +584,7 @@ void saldir(){
                     savunan1 = 4;
                     savunan2 = 0;
                 }
-                else if(secim2 == "rakip üs"){
+                else if(secim2 == "rakip us"){
                     savunan = cephe[5][0];
                     savunan1 = 5;
                     savunan2 = 0;
@@ -594,12 +594,12 @@ void saldir(){
                     break;
                 }
                 else{
-                    cout << "birimin konumunu doğru belirttiğinizden emin olun!" << endl;
+                    cout << "birimin konumunu dogru belirttiginizden emin olun!" << endl;
                     c++;
                     break;
                 }
                 if(savunan == 0){
-                    cout << "seçtiğiniz konumda birim bulunmamaktadır!" << endl;
+                    cout << "sectiginiz konumda birim bulunmamaktadir!" << endl;
                     c++;
                     break;
                 }
@@ -743,7 +743,7 @@ int para_kullanimi(){
             else if(birim == "komando")
                 para1-=3;
             else{
-                cout << "paranız yeterli değil!" << endl;
+                cout << "paraniz yeterli degil!" << endl;
                 geri++;
             }
         }else if(para1==2){
@@ -752,7 +752,7 @@ int para_kullanimi(){
             else if(birim == "mekanize piyade")
                 para1-=2;
             else{
-                cout << "paranız yeterli değil!" << endl;
+                cout << "paraniz yeterli degil!" << endl;
                 geri++;
                 
             }
@@ -760,11 +760,11 @@ int para_kullanimi(){
             if(birim == "piyade")
                 para1--;
             else{
-                cout << "paranız yeterli değil!" << endl;
+                cout << "paraniz yeterli degil!" << endl;
                 geri++;
             }
         }else if(para1 == 0){
-            cout << "paranız yeterli değil!" << endl;
+            cout << "paraniz yeterli degil!" << endl;
             geri++;
         }
     }
@@ -786,7 +786,7 @@ int para_kullanimi(){
             else if(birim == "komando")
                 para2-=3;
             else{
-                cout << "paranız yeterli değil!" << endl;
+                cout << "paraniz yeterli degil!" << endl;
                 geri++;
             }
         }else if(para2==2){
@@ -795,7 +795,7 @@ int para_kullanimi(){
             else if(birim == "mekanize piyade")
                 para2-=2;
             else{
-                cout << "paranız yeterli değil!" << endl;
+                cout << "paraniz yeterli degil!" << endl;
                 geri++;
                 
             }
@@ -803,11 +803,11 @@ int para_kullanimi(){
             if(birim == "piyade")
                 para2--;
             else{
-                cout << "paranız yeterli değil!" << endl;
+                cout << "paraniz yeterli degil!" << endl;
                 geri++;
             }
         }else if(para2 == 0){
-            cout << "paranız yeterli değil!" << endl;
+            cout << "paraniz yeterli degil!" << endl;
             geri++;
         }
     }
@@ -820,7 +820,7 @@ int birim_oyna2(){
     do{
         if(c==2)
             c--;
-            cout << yerlestirme << " konumuna yerlestirmek istediğiniz birimi seçin(piyade/mekanize piyade/komando/tank/birimler hakkında/geri):";
+            cout << yerlestirme << " konumuna yerlestirmek istediginiz birimi secin(piyade/mekanize piyade/komando/tank/birimler hakkinda/geri):";
             getline(cin,b);
             if(b == "piyade")
                 birim = b;
@@ -830,8 +830,8 @@ int birim_oyna2(){
                 birim = b;
             else if(b == "tank")
                 birim = b;
-            else if(b == "birimler hakkında"){
-                birimler_hakkında();
+            else if(b == "birimler hakkinda"){
+                birimler_hakkinda();
                 c++;
             }
             else if (b == "geri"){
@@ -839,7 +839,7 @@ int birim_oyna2(){
                 break;
                 
             }else{
-                cout << "yerlestirmek istediğiniz biriminin adını doğru yazınız!" << endl;
+                cout << "yerlestirmek istediginiz biriminin adini dogru yaziniz!" << endl;
                 c++;
             }
     }while(c==2);
@@ -854,7 +854,7 @@ int birim_oyna1(){
             
             if(c==2)
                 c--;
-            cout << "yerleştirilecek bölgeyi seçin(A1/A2/A3/A4/A5/geri):";
+            cout << "yerlestirilecek bolgeyi secin(A1/A2/A3/A4/A5/geri):";
             getline(cin,a);
             if(a == "A1")
                 yerlestirme = a;
@@ -870,7 +870,7 @@ int birim_oyna1(){
                 geri++;
                 break;
             }else{
-                cout << "yerleştirilecek bölgeyi doğru tanımlayın!" << endl;
+                cout << "yerlestirilecek bolgeyi dogru tanimlayin!" << endl;
                 c++;
             }
             
@@ -879,7 +879,7 @@ int birim_oyna1(){
             
             if(c==2)
                 c--;
-            cout << "yerleştirilecek bölgeyi seçin(B1/B2/B3/B4/B5/geri):";
+            cout << "yerlestirilecek bolgeyi secin(B1/B2/B3/B4/B5/geri):";
             getline(cin,a);
             if(a == "B1")
                 yerlestirme = a;
@@ -895,7 +895,7 @@ int birim_oyna1(){
                 geri++;
                 break;
             }else{
-                cout << "yerleştirilecek bölgeyi doğru tanımlayın!" << endl;
+                cout << "yerlestirilecek bolgeyi dogru tanimlayin!" << endl;
                 c++;
             }
             
@@ -903,4 +903,5 @@ int birim_oyna1(){
     }while(c==2);
     return geri;
 }
+
 
