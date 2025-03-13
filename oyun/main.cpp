@@ -145,10 +145,7 @@ int main(){
     if(cephe[5][0] > cephe[5][1])
         cout << "player1 in zaferi, tebrik ederim." << endl;
     if(cephe[5][0] == cephe[5][1]){
-        if(cephe[5][0] == 15)
-            cout << "TEBRİKLER İKİNİZDE KAZANDINIZ." << endl;
-        else
-            cout << "tebrikler ikinizde kaybettiniz." << endl;
+        cout << "beraberlik." << endl;
     }
         return 0;
 }
