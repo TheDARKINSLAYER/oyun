@@ -2,8 +2,8 @@
 #include <iostream>
 #include <string>
 using namespace std;
-int para1 = 0;
-int para2 = 0;
+int money1 = 0;
+int money2 = 0;
 int tank = 43;
 int saldiran;
 int savunan;
@@ -56,10 +56,10 @@ int birim_oyna1();
 
 void sistem1(){
     if(hamle_sirasi =="player2")
-        cout << "hamle sırası sizde player2(tur sayacı:" << tur <<")(para:"<< para2 << ")(saldır/birim oyna/pas geç/cephe raporu/oyun hakkında):";
+        cout << "hamle sırası sizde player2(tur sayacı:" << tur <<")(money:"<< para2 << ")(saldır/birim oyna/pas geç/cephe raporu/oyun hakkında):";
     
     else if(hamle_sirasi=="player1")
-        cout << "hamle sırası sizde player1(tur sayacı:" << tur <<")(para:"<< para1 << ")(saldır/birim oyna/pas geç/cephe raporu/oyun hakkında):";
+        cout << "hamle sırası sizde player1(tur sayacı:" << tur <<")(money:"<< para1 << ")(saldır/birim oyna/pas geç/cephe raporu/oyun hakkında):";
 }
 
 
@@ -70,16 +70,16 @@ int main(){
     for( tur=1;tur<31;tur++){
         if(tur%2==0){
             hamle_sirasi = "player2";
-            para2++;
+            money2++;
         }
         else{
             hamle_sirasi = "player1";
-            para1++;
+            money1++;
         }
-        if(para1 == 6)
-            para1--;
-        if(para2 == 6)
-            para2--;
+        if(money1 == 6)
+            money1--;
+        if(money2 == 6)
+            money2--;
         saldiri_hakki_yenileme();
         
         int c = 1;
@@ -161,7 +161,7 @@ void birimler_hakkında(){
 }
 
 void oyun_hakkinda(){
-    cout << "Bu bir sıra tabanlı savaş oyunudur, 2 kişiliktir." << endl;
+    cout << "This is a turn-based strategy game for 2 players.." << endl;
     cout << "tur sana geçtiğinde +1 para elde edersin, sadece pas geç komutunu kullanarak turu geçirebilirsiniz ve tur sınırı 30 dur." << endl;
     cout << "pas geçerek paranızı biriktirebilirsiniz para sınırı 5 tir." <<endl;
     cout << "birim oyna seçeneğinde biriminizi yerlestirmek istediğiniz bölgeyi ve ardından yerlestirmek istediğiniz birimi seçin, eğer paranız o birimin para bedelini karşılamıyorsa o birimi oynayamazsınız." << endl;
