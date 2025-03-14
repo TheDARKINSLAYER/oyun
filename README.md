@@ -1,3 +1,3 @@
 # oyun
-herhangi bir tavsiyeniz olursa bildirmekten çekinmeyin
+If you have any suggestion let me know.
  
