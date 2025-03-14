@@ -1,4 +1,4 @@
-//2024 yazı kişisel projem
+//2024 summer private project
 #include <iostream>
 #include <string>
 using namespace std;
